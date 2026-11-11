@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #995E36;
+  --color-back: #F2EADF;
+  --color-card: #E7C8AB;
+  --color-text: #4A3728;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  
+  /* Registers the utility classes: font-playfair and font-lato */
+  --font-ibm: var(--font-ibm), serif;
+  --font-lato: var(--font-lato), sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #F9ECDF;
+    --foreground: #4A3728;
+  }
+}
+
+/* Base styles using your theme tokens */
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-lato);
+  margin: 0;
+  padding: 0;
+  border: #ffffff
+}
+
+h1, h2, h3, h4, h5, h6, .order-button {
+  font-family: var(--font-ibm);
+}
